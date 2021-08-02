@@ -30,7 +30,7 @@ const signup = async (req, res) => {
       return res.status(409).send("email exists");
     }
 
-    const add = await new user({
+    const addDATA = await new user({
       id: s_rollno,
       s_name,
       s_email,
@@ -44,10 +44,11 @@ const signup = async (req, res) => {
 
     //saving in database
     console.log(req.body);
-    const result = await add.save();
+    console.log(addDATA, "ADD OF");
+    const result = await addDATA.save();
 
     console.log(result, "the result");
-    console.log(add);
+    // console.log(add);
     // console.log(addData.email, "jwjwj");
     res.send("Sucess signup");
   } catch (error) {
