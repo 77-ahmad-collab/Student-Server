@@ -45,9 +45,9 @@ const signup = async (req, res) => {
     //saving in database
     console.log(req.body);
     console.log(addDATA, "ADD OF");
-    const result = await addDATA.save();
+    const resultOF = await addDATA.save();
 
-    console.log(result, "the result");
+    console.log(resultOF, "the result");
     // console.log(add);
     // console.log(addData.email, "jwjwj");
     res.send("Sucess signup");
