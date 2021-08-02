@@ -47,7 +47,8 @@ const signup = async (req, res) => {
     const result = await add.save();
 
     console.log(result, "the result");
-    console.log(addData.email);
+    console.log(add);
+    // console.log(addData.email, "jwjwj");
     res.send("Sucess signup");
   } catch (error) {
     res.status(400).send("error hay");
