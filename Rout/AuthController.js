@@ -43,10 +43,11 @@ const signup = async (req, res) => {
     });
 
     //saving in database
-
+    console.log(req.body);
     const result = await add.save();
-    // console.log(result, "the result");
-    // console.log(addData.email);
+
+    console.log(result, "the result");
+    console.log(addData.email);
     res.send("Sucess signup");
   } catch (error) {
     res.status(400).send("error hay");
